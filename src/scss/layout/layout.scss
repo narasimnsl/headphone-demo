@@ -1,0 +1,148 @@
+/* Styles for the main build container*/
+.Container{
+    position: relative;
+    border-right:2px solid #f1f1f1;
+    width:50%;
+    .top-container{
+        padding:35px 75px;
+        .backNav{
+            margin-bottom: 80px;
+        }
+        h1{
+            color: #000;
+        }
+    }
+    .img-container{
+        width: 45%;
+        position: fixed;
+        top:20px;
+        right:0px;
+        .headphoneImage{
+            width:100%;
+            height: auto;
+        }
+        .sel-item-mobile{
+            display: none;
+        }
+    }
+    .dol-container{
+        padding:10px 75px;
+        p{
+            display: inline-block;
+            margin-right: 30px;
+            font-size:24px;
+            &.curVal{
+                color:#000;
+            }
+        }
+    }
+    .sel-container{
+        padding:35px 75px;
+        display: block;
+    }
+    .cart-container{
+        border-top:2px solid #f1f1f1;
+        padding:30px 75px;
+        .cartButton{
+            display: inline-block;
+            vertical-align: middle;
+            border: none;
+            border-radius:5px;
+            background: #3F87F5;
+            width:180px;
+            height:50px;
+            color:#fff;
+            font-size: 14px;
+            cursor:pointer;
+            margin-right: 30px;
+        }
+        .chOutText{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    
+
+}
+
+.styled-select{
+    display:block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #f1f1f1;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 40px;
+    width: 180px;
+    margin-top:10px;
+    padding: 5px;
+    
+} 
+.ImgLoadSpinner{
+    position: relative;
+    margin-left:45%;
+    top:130px;
+}
+img{
+    width:100% !important;
+    height:auto !important;
+}
+
+/* On screens that are 768px or less, set the Module Wrapper width 100% */
+@media screen and (max-width: 768px) {
+    .Container{
+        border-right:none;
+        width:100%;
+        .top-container{
+            padding:20px;
+            .backNav{
+                margin-bottom: 40px;
+            }
+            
+        }
+        .img-container{
+            position: relative;
+            width: 100%;
+            top:0px;
+            right:0px;
+            min-height: 200px;
+            .sel-item-mobile{
+                display: block;
+                position: absolute;
+                left:20px;
+                top:0px;
+                .styled-select{
+                    width:120px;
+                }
+            }
+        }
+        .dol-container{
+            padding:10px 20px;
+            text-align: center;
+            p{
+                margin-right: 20px;   
+            }
+        }
+        .sel-container{
+            display:none;
+
+        }
+        .cart-container{
+            padding:30px 20px;
+            min-height: 100px;
+            .cartButton{
+                display: block;
+                margin: 0 auto;
+            }
+            .chOutText{
+                display: block;
+                text-align: center;
+            }
+            
+        }
+
+
+    }
+    
+}

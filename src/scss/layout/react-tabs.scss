@@ -1,0 +1,77 @@
+/* Styles for react-tab*/
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+  
+    &__tab-list {
+      border-bottom: 2px solid #f1f1f1;
+      margin: 0 0 10px;
+      padding-left: 75px;
+    }
+  
+    &__tab {
+      display: inline-block;
+      border: 1px solid transparent;
+      border-bottom: none;
+      bottom: -1px;
+      position: relative;
+      list-style: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-right:60px;
+      &--selected {
+        
+        color: black;
+        border-bottom: 3px solid #3F87F5;
+      }
+  
+      &--disabled {
+        cursor: default;
+      }
+  
+      &:focus {
+        box-shadow: 0 0 5px hsl(208, 99%, 50%);
+        border-color: hsl(208, 99%, 50%);
+        outline: none;
+  
+        &:after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          left: -4px;
+          right: -4px;
+          bottom: -5px;
+          background: #fff;
+        }
+      }
+    }
+  
+    &__tab-panel {
+      display: none;
+      padding: 20px 75px;
+      &--selected {
+        display: block;
+      }
+    }
+  }
+
+
+/* On screens that are 768px or less, set the Module Wrapper width 100% */
+@media screen and (max-width: 768px) {
+  .react-tabs {
+   
+    &__tab-list {
+   
+      padding-left: 20px;
+    }
+    
+    &__tab {
+      margin-right: 10px;
+      padding: 10px;
+    }
+  
+    &__tab-panel {
+      padding: 0px 20px;
+      
+    }
+  }
+}
